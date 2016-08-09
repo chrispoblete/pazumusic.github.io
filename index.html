@@ -5,85 +5,120 @@
     <meta property="og:title" content="PAZU | What Type of Music Mind Are You?" />
     <meta property="og:description" content="Want to find out the best way you learn music? Take this short questionnaire to find out more." />
     <meta property="og:image" content="http://www.pazumusic.com/music-mind/img/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://npmcdn.com/flickity@2.0.2/dist/flickity.pkgd.min.js"></script>
-    <script src="js/musicmind.js" type="text/javascript"></script>
+    <script src="js/musicmind_legacy.js" type="text/javascript"></script>
     <link type="text/css" rel="stylesheet" href="https://npmcdn.com/flickity@2.0.2/dist/flickity.min.css" />
     <link type="text/css" rel="stylesheet" href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" />
     <link type="text/css" rel="stylesheet" href="css/musicmind.css" />
-<script src="https://use.typekit.net/hec8rxm.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="https://use.typekit.net/hec8rxm.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
     <div class="music-mind-container">
       <div class="music-mind-page music-mind-page-1">
-        <h1><span>PAZU</span> <strong> Welcome to Music Mind!</strong></h1>
+        <h1><span class="pazu-title">PAZU</span> <strong> Welcome to Music Mind!</strong></h1>
         <div class="music-mind-body">
           <p>Want to find out the best way you learn music? Take this short questionnaire to find out more. There are 3 main pathways to learning music:</p>
           <ul class="results-panel">
-            <li class="ear">ear</li>
-            <li class="eye">eye</li>
-            <li class="create">create</li>
+            <div class="pathway"><li class="ear"></li><br/><div class="pathway-title pathway-ear">EAR</div></div>
+            <div class="pathway"><li class="eye"></li><br/><div class="pathway-title pathway-eye">EYE</div></div>
+            <div class="pathway"><li class="create"></li><br/><div class="pathway-title pathway-create">CREATE</div></div>
           </ul>
-          <h4>Which one are you strongest in?</h4>
+          <h4 class="which-one">Which one are you strongest in?</h4>
+        </div>
+        <div class="page-1-btm">
           <button class="music-mind-page-button">
             Take The Test!
           </button>
+          <div class="blue-bar"></div>
         </div>
       </div>
       <div class="music-mind-page music-mind-page-2">
-        <h1><span>Music Mind</span><strong id="question-number">Question #:1</strong> </h1>
+        <h1><span>Music Mind</span></h1><div class="question-number"><strong id="question-number">Question #:1</strong></div>
         <div class="music-mind-body">
           <div class="main-carousel js-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true, "accessibility": false, "prevNextButtons": false, "pageDots": false }'></div>
           <div id="quiz-question-template" class="carousel-cell quiz-question" style="display:none">
             <p></p>
             <div class="answer-section">
-              <label class="control control-radio">strongly disagree
-              <input type="radio" name="question-answer" value="1">
-              <span class="control_indicator"></span>
-              </label>
-              <label class="control control-radio">disagree
-              <input type="radio" name="question-answer" value="2">
-              <span class="control_indicator"></span>
-              </label>
-              <label class="control control-radio">somewhat disagree
-              <input type="radio" name="question-answer" value="3">
-              <span class="control_indicator"></span>
-              </label>
-              <label class="control control-radio">unsure
-              <input type="radio" name="question-answer" value="4">
-              <span class="control_indicator"></span>
-              </label>
-              <label class="control control-radio">somewhat agree
-              <input type="radio" name="question-answer" value="5">
-              <span class="control_indicator"></span>
-              </label>
-              <label class="control control-radio">agree
-              <input type="radio" name="question-answer" value="6">
-              <span class="control_indicator"></span>
-              </label>
-              <label class="control control-radio">strongly agree
-              <input type="radio" name="question-answer" value="7">
-              <span class="control_indicator"></span>
-              </label>
+              <div class="answer-one">
+              	<label class="control control-radio">
+              	<input type="radio" name="question-answer" value="1">
+              	<span class="control_indicator control-one"></span>
+              	<span class="radio-caption radio-caption-one">strongly disagree</span>
+              	</label>
+              </div>
+              <div class="answer-two">
+              	<label class="control control-radio">
+              	<input type="radio" name="question-answer" value="2">
+              	<span class="control_indicator control-two"></span>
+              	<span class="radio-caption radio-caption-two">disagree</span>
+
+              	</label>
+              </div>
+              <div class="answer-three">
+              	<label class="control control-radio">
+              	<input type="radio" name="question-answer" value="3">
+              	<span class="control_indicator control-three"></span>
+              	<span class="radio-caption radio-caption-three">somewhat disagree</span>
+              	</label>
+              </div>
+              <div class="answer-four">
+              	<label class="control control-radio">
+              	<input type="radio" name="question-answer" value="4">
+              	<span class="control_indicator control-four"></span>
+              	<span class="radio-caption radio-caption-four">unsure</span>
+              	</label>
+              </div>
+              <div class="answer-five">
+              	<label class="control control-radio">
+              	<input type="radio" name="question-answer" value="5">
+              	<span class="control_indicator control-five"></span>
+              	<span class="radio-caption radio-caption-five">somewhat agree</span>
+              	</label>
+              </div>
+              <div class="answer-six">
+              	<label class="control control-radio">
+              	<input type="radio" name="question-answer" value="6">
+              	<span class="control_indicator control-six"></span>
+              	<span class="radio-caption radio-caption-six">agree</span>
+              	</label>
+              </div>
+              <div class="answer-seven">
+              	<label class="control control-radio">
+              	<input type="radio" name="question-answer" value="7">
+              	<span class="control_indicator control-seven"></span>
+              	<span class="radio-caption radio-caption-seven">strongly agree</span>
+              	</label>
+              </div>
             </div>
           </div>
           <div id="tie-breaker-template" class="carousel-cell quiz-question" style="display:none">
             <p>If you were going to learn a song right now, which way would you prefer?</p>
             <div id="tie-breaker" class="answer-section">
-              <label class="control control-radio">I'd love to learn by finding the sounds I hear.
-              <input type="radio" name="tie-breaker-answer" value="ear"> 
-              <span class="control_indicator"></span>
-              </label>
-              <label class="control control-radio">I'd like to learn by following visual queues.
-              <input type="radio" name="tie-breaker-answer" value="eye"> 
-              <span class="control_indicator"></span>
-              </label>
-              <label class="control control-radio">I'd like to experiment and make up my own song.
-              <input type="radio" name="tie-breaker-answer" value="create"> 
-              <span class="control_indicator"></span>
-              </label>
+              <div class="tb-answer-one">
+              	<label class="control control-radio">
+              	<input type="radio" name="tie-breaker-answer" value="ear">
+              	<span class="control_indicator ci-ear"></span>
+              	<span class="radio-caption radio-caption-tb-one">I'd love to learn by finding the sounds I hear.</span>
+              	</label>
+              </div>
+              <div class="tb-answer-two">
+              	<label class="control control-radio">
+              	<input type="radio" name="tie-breaker-answer" value="eye">
+              	<span class="control_indicator ci-eye"></span>
+              	<span class="radio-caption radio-caption-tb-two">I'd like to learn by following visual queues.</span>
+              	</label>
+              </div>
+              <div class="tb-answer-three">
+              	<label class="control control-radio">
+              	<input type="radio" name="tie-breaker-answer" value="create">
+              	<span class="control_indicator ci-create"></span>
+              	<span class="radio-caption radio-caption-tb-three">I'd like to experiment and make up my own song.</span>
+              	</label>
+              </div>
             </div>
           </div>
           <div class="progress-bar">
@@ -99,7 +134,7 @@
         </div>
       </div>
       <div class="music-mind-page music-mind-page-3">
-        <h1><span>You're results are being processed</span><strong>Almost Done!</strong></h1>
+        <h1><div class="your-results"><div class="your-results2">Your results are being processed</div></div><strong>Almost Done!</strong></h1>
         <div class="music-mind-body">
           <p>
             While you wait, please enter your email below to receive the top 5 tips to becoming a great musician, exciting updates and much more!
@@ -136,27 +171,39 @@
         </div>
       </div>
       <div class="music-mind-page music-mind-page-4">
-        <h1><span>You're music mind is: </span><strong class="music-mind-result"></strong></h1>
+      	<div class="results-bar">
+      		<div class="results-icon"></div>
+        	<h1><span>Your music mind is: </span>&nbsp;<strong class="music-mind-result"></strong></h1>
+        </div>
         <div class="music-mind-body">
-          <ul class="results-panel">
-            <li>Eye: <span id="eye-result"></span></li>
-            <li>Ear: <span id="ear-result"></span></li>
-            <li>Create: <span id="create-result"></span></li>
-          </ul>
-          <h4>Your Strengths:</h4>
-          <div class="strengths-container">
-            <ul id="strengths-list"></ul>
-            <button class="music-mind-page-button">
-              Share Your Results!
-            </button>
+          <div class="results-wrap">
+            <div class="results-end results-end-1">
+              <ul class="results-panel">
+                <li>Eye: <span id="eye-result"></span></li>
+                <li>Ear: <span id="ear-result"></span></li>
+                <li>Create: <span id="create-result"></span></li>
+              </ul>
+            </div>
+            <div class="results-end results-end-2">
+              <h4>Your Strengths:</h4>
+              <div class="strengths-container">
+                <ul id="strengths-list"></ul>
+              </div>
+            </div>
           </div>
+          <button class="music-mind-page-button">
+            Share Your Results!
+          </button>
         </div>
       </div>
       <div class="music-mind-page music-mind-page-5">
-        <h1><span>Share Your Result</span> With Your Friends!</h1>
+        <!-- <div class="your-results">
+          <div class="your-results2"><h1><strong>Share with Your Friends!</strong></h1></div>
+        </div> -->
+        <h1><span class="pazu-title">PAZU</span> <strong> Share with Your Friends!</strong></h1>
         <div class="music-mind-body">
-          <h3 class="music-mind-result"></h3>
-          <div class="music-mind-result"></div>
+          <h3 class="music-mind-result">Music Mind: </h3>
+          <div class="music-mind-result-icon"></div>
           <div class="addthis_sharing_toolbox"></div>
           <h3>What Makes You Different Makes You Unique!</h3>
           <p> At PAZU, we understand this and believe that the WAY you learn music should be as important as WHAT you learn.</p>
@@ -187,7 +234,7 @@
         <div class="music-mind-body">
           <p>We've sent you your first lesson on 3-ways to improve your music skill.</p>
           <br/><br/>
-          <p><a href="http://www.pazumusic.com">Visit Pazumusic.com</a></p>
+          <p><span class="pazu-button"><a href="http://www.pazumusic.com">Visit Pazumusic.com</a></span></p>
         </div>
       </div>
     </div>
